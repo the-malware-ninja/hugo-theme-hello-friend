@@ -37,3 +37,24 @@
 .theme-toggler {
   fill: currentColor;
 }
+
+.i18n {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+
+	li {
+		padding-left: 1.0rem;
+
+		a {
+			background-image: none;
+		}
+		#trans-flag {
+			display: flex;
+			height: 1.3rem;
+ 			margin-top: 0.9rem; 
+			transition: margin-top 2.0s;
+ 			border: 1px solid var(--wk-accent-border-color);
+		}
+	}			
+}
