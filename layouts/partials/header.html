@@ -14,20 +14,22 @@
       <span class="theme-toggle">
         {{ partial "theme-icon.html" . }}
       </span>
-      <ul class="i18n">
-        {{ if .IsTranslated }}
-          {{ range .Translations }}
-            {{/* .Site.Language.Lang */}}
-            {{ if eq .Site.Language.Lang "en" }}
-              {{ $imgpath := printf "%s%s" .Site.BaseURL "img/flag-great-britain.png" }}
-              <li><a title="English" href="{{ .RelPermalink }}"><img id="trans-flag" src={{ $imgpath }} alt="English" /></a></li>
-            {{ else }}
-              {{ $imgpath := printf "%s%s" .Site.BaseURL "img/flag-spain.png" }}
-              <li><a title="Spanish" href="{{ .RelPermalink }}"><img id="trans-flag" src={{ $imgpath }} alt="Spanish" /></a></li>
+        <span>
+        <ul class="i18n">
+          {{ if .IsTranslated }}
+            {{ range .Translations }}
+              {{/* .Site.Language.Lang */}}
+              {{ if eq .Site.Language.Lang "en" }}
+                {{ $imgpath := printf "%s%s" .Site.BaseURL "img/flag-great-britain.png" }}
+                <li><a title="English" href="{{ .RelPermalink }}"><img id="trans-flag" src={{ $imgpath }} alt="English" /></a></li>
+              {{ else }}
+                {{ $imgpath := printf "%s%s" .Site.BaseURL "img/flag-spain.png" }}
+                <li><a title="Spanish" href="{{ .RelPermalink }}"><img id="trans-flag" src={{ $imgpath }} alt="Spanish" /></a></li>
+              {{ end }}
             {{ end }}
           {{ end }}
-        {{ end }}
-      </ul>
+        </ul>
+      </span>
     </span>
   </span>
 </header>
